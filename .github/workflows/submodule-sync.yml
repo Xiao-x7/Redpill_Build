@@ -31,7 +31,7 @@ jobs:
     # Update references
     - name: Git Sumbodule Update
       run: |
-        git pull --recurse-submodules https://github.com/wjz304/redpill-load.git
+        git pull --recurse-submodules
         git submodule update --remote --recursive
 
     - name: Commit update
