@@ -18,7 +18,7 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - platform: DS423+
+          - platform: DS920+
             version: 7.2.X
             machine: Custom
             user: Xiao-x7
@@ -294,7 +294,9 @@ jobs:
             rpext=https://raw.githubusercontent.com/wjz304/rp-ext/master
             ./ext-manager.sh add "${rpext}/addons/boot-wait/rpext-index.json"
             ./ext-manager.sh add "${rpext}/addons/acpid2/rpext-index.json"
-            #./ext-manager.sh add "${rpext}/modules/r8125/rpext-index.json"
+            ./ext-manager.sh add "${rpext}/addons/cpuinfo/rpext-index.json"
+            ./ext-manager.sh add "${rpext}/addons/hdddb/rpext-index.json"
+            ./ext-manager.sh add "${rpext}/addons/wol/rpext-index.json"
             if [ -n "${{ env.driver }}" ]; then
               driver=$(echo ${{ env.driver }} | awk '{gsub(/ /,"")}1')
               drivers=(${driver//,/ })
