@@ -1,4 +1,4 @@
-name: Build DS920+ 7.2.0-64570 For UNAS_T401P
+name: Build DS920+ 7.2.0-69057 For UNAS_T401P
 
 on:
   schedule:
@@ -19,8 +19,8 @@ jobs:
       matrix:
         include:
           - platform: DS920+
-            version: 7.2.0-64570
-            machine: UNAS_T401P
+            version: 7.2.1-69057
+            machine: B250_ITX
             user: Xiao—x7
 
     steps:
