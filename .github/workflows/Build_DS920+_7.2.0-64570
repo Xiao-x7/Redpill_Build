@@ -1,4 +1,4 @@
-name: Build DS920+ 7.2.0-64570 For UNAS_T401P
+name: Build DS920+ 7.2.0-64570
 
 on:
   schedule:
@@ -20,8 +20,8 @@ jobs:
         include:
           - platform: DS920+
             version: 7.2.0-64570
-            machine: UNAS_T401P
-            user: chenxudong2020
+            machine: 雲星B250_ITX
+            user: Xiao-x7
 
     steps:
       - name: 检出项目文件
