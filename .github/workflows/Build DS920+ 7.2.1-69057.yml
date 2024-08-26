@@ -1,4 +1,4 @@
-name: Build DS920+ 7.2.0-69057 For UNAS_T401P
+name: Build DS920+ 7.2.0-69057
 
 on:
   schedule:
@@ -56,6 +56,7 @@ jobs:
           ./ext-manager.sh add 'https://raw.githubusercontent.com/chenxudong2020/rp-ext/main/addons/hdddb/rpext-index.json'
           ./ext-manager.sh add 'https://raw.githubusercontent.com/chenxudong2020/rp-ext/main/addons/nvmevolume/rpext-index.json'
           ./ext-manager.sh add 'https://raw.githubusercontent.com/chenxudong2020/rp-ext/main/addons/wol/rpext-index.json'
+          ./ext-manager.sh add 'https://raw.githubusercontent.com/chenxudong2020/rp-ext/main/addons/cpuinfo/rpext-index.json'
           ./ext-manager.sh add 'https://raw.githubusercontent.com/chenxudong2020/rp-ext/main/modules/r8125/rpext-index.json'
           
       - name: 编译DTB
