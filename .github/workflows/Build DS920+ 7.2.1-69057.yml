@@ -64,9 +64,7 @@ jobs:
             cd /home/runner/redpill-load
             wget https://raw.githubusercontent.com/pocopico/rp-ext/main/redpill-dtb-static/releases/dtc
             chmod +x ./dtc
-            echo "编译DTS为DTB"
-            wget -O ${{matrix.machine}}_ds920p.dts https://raw.githubusercontent.com/Xiao-x7/Redpill_Build/main/dts/B250_ITX_ds920p.dts
-            ./dtc -I dts -O dtb -o ./ds920p.dtb ./${{matrix.machine}}_ds920p.dts
+            wget https://github.com/Xiao-x7/Redpill_Build/raw/main/dts/ds920p.dtb
             EXT_PATH="`./ext/dtbstatic/make.sh ./ds920p.dtb`"
             if [ -n "${EXT_PATH}" ]; then 
                 echo "EXT_PATH: ${EXT_PATH}"
